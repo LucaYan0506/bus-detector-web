@@ -1,0 +1,46 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "styles.css" %}">
+    <title>Bus detector</title>
+</head>
+<body>
+
+    <div class="panel-container">
+        <h1>Upload your video</h1>
+        <button class="panel-btn active" id="p1" onclick="switchPanel('panel1','p1')">From local machine</button>
+        <button class="panel-btn " id="p2" onclick="switchPanel('panel2','p2')">From youtube</button>
+        <div id="panel1" class="panel active">
+            <div class="drop-zone" id="dropZone">
+                <p>Drag & Drop your MP4 file here</p>
+                <p>or</p>
+                <button id="fileSelectBtn">Select File</button>
+                <form action="{% url "detect" %}" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <input type="file" id="fileInput" name="video" style="display:none;" accept=".mp4">
+                    <button id="detect-btn1">Detect Bus</button>
+                </form>
+            </div>
+        
+            <div id="fileList"></div>
+        
+        </div>
+
+        <div id="panel2" class="panel">
+            <div id="container">
+                <h2 style="text-align: center;">Enter the url of the video</h2>
+                <form action="" method="post" id="form">
+                    {% csrf_token %}
+                    <input type="hidden" name="lan" value="ZH">
+                    <input type="text" placeholder="URL" style="padding-bottom: 7px;" name="link">
+                    <button type="submit">Detect Bus</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static "script.js" %}"></script>
+</body>
+</html>

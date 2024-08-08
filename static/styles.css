@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.panel-container {
+    position: relative;
+    width: 90vw;
+    min-height: 400px;
+}
+
+.panel {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: 0;
+    width: calc(100% - 40px);
+    display: none;
+}
+
+.panel.active {
+    display: block;
+}
+
+.panel h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+.panel p {
+    margin-bottom: 15px;
+}
+
+.panel-btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    color: #007bff;
+    background-color: transparent;
+    background-image: none;
+    border-color: #007bff;
+}
+
+.panel-btn:hover, .panel-btn.active{
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.drop-zone {
+    width: 300px;
+    height: 200px;
+    border: 2px dashed #007bff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.drop-zone.dragover {
+    border-color: #0056b3;
+    background-color: #e6f0ff;
+}
+
+.drop-zone p {
+    margin: 10px 0;
+}
+
+#fileSelectBtn{
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#fileSelectBtn:hover {
+    background-color: #0056b3;
+}
+
+#fileList {
+    margin-top: 20px;
+    width: 300px;
+}
+
+#fileList ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#fileList li {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    color: red;
+}
+
+#container input{
+    height: 32px;
+    width: calc(100% - 100px);
+}
+
+#detect-btn1{
+    position:relative;
+    bottom: -55px;
+    left:235px;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    color: #28a745;
+    background-color: transparent;
+    background-image: none;
+    border-color: #28a745;
+}
+
+#detect-btn1:hover {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
