@@ -17,7 +17,8 @@ def detectView(request):
             fs = FileSystemStorage()
             filename = fs.save(video.name, video)
             file_url = fs.url(filename)
-            process_video(os.path.join(settings .MEDIA_ROOT,filename))
+            model_path = os.path.join(settings.MEDIA_ROOT,'last.pt')
+            process_video(os.path.join(settings .MEDIA_ROOT,filename),model_path)
             return HttpResponseRedirect('/media/result.mp4')
         else:
             return JsonResponse({'error': 'Invalid file type'}, status=400)

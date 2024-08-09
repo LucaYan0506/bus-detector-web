@@ -5,7 +5,7 @@ import argparse
 from ultralytics import YOLO
 from moviepy.editor import VideoFileClip
 
-def process_video(video_path):
+def process_video(video_path,model_path):
     #get the video
     
 
@@ -19,7 +19,6 @@ def process_video(video_path):
     out = cv2.VideoWriter(video_path_out, cv2.VideoWriter_fourcc(*'mp4v'), int(cap.get(cv2.CAP_PROP_FPS)), (W, H))
 
     # Load a model
-    model_path = r'C:\Users\lucay\Desktop\bus_det_web\core\last.pt'
     model = YOLO(model_path)  # load a custom model
 
     threshold = 0.7
