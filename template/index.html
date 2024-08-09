@@ -20,7 +20,7 @@
                 <form action="{% url "detect" %}" method="post" enctype="multipart/form-data">
                     {% csrf_token %}
                     <input type="file" id="fileInput" name="video" style="display:none;" accept=".mp4">
-                    <button id="detect-btn1">Detect Bus</button>
+                    <button id="detect-btn" style="position:relative;bottom: -55px;left:235px;">Detect Bus</button>
                 </form>
             </div>
         
@@ -35,7 +35,7 @@
                     {% csrf_token %}
                     <input type="hidden" name="lan" value="ZH">
                     <input type="text" placeholder="URL" style="padding-bottom: 7px;" name="link">
-                    <button type="submit">Detect Bus</button>
+                    <button type="submit" id="detect-btn">Detect Bus</button>
                 </form>
             </div>
         </div>

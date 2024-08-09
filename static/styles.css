@@ -123,13 +123,10 @@ body {
 
 #container input{
     height: 32px;
-    width: calc(100% - 100px);
+    width: calc(100% - 120px);
 }
 
-#detect-btn1{
-    position:relative;
-    bottom: -55px;
-    left:235px;
+#detect-btn{
     display: inline-block;
     font-weight: 400;
     text-align: center;
@@ -151,7 +148,7 @@ body {
     border-color: #28a745;
 }
 
-#detect-btn1:hover {
+#detect-btn:hover {
     color: #fff;
     background-color: #28a745;
     border-color: #28a745;
